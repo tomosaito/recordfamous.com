@@ -1,23 +1,208 @@
---- yaml
-layout: 'default'
-title: 'Home'
+---
+layout: default
+title: Home
+bodyClass: home
 ---
 
-// Main hero unit for a primary marketing message or call to action.
-.jumbotron
-  h1 Welcome to your new site!
-  p: :markdown
-    We've copied over the [Twitter Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-    <br>
-    Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
+section(data-20-top="background-position:center 28%" data--280-top="background-position:center 100%")#intro
+  article.container
+    header.row.text-center
+      .col-md-12
+        h3 RECORD FAMOUS
+    .row
+      .col-md-12.text-center      
+        h2 Hi, I'm Vikram
+        h4 Frontend Developer && Multi-Tool
 
-// Example row of columns.
-.row
-  .col-md-6
-    h2 Docpad
-    p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-    p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
-  .col-md-6
-    h2 Twitter Bootstrap
-    p Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-    p: a.btn.btn-default(href="http://twitter.github.com/bootstrap/") Visit Website
+section(data-center-top="background-color:rgb(255,211,128)" data-100-center="background-color:rgb(242,168,143)")#brief
+  article.container
+    header.row.text-center
+      .col-xs-12
+        h2 BUILD
+        h4 Markers Music and Code
+    .row
+      .col-md-6.col-md-offset-3.col-xs-12
+        ul.nav.nav-pills.nav-justified
+          li.active
+            a(href="#dev" data-toggle="tab")
+              h2
+                span.fa.fa-cog
+              p.text-center DEV
+          li
+            a(href="#design" data-toggle="tab")
+              h2
+                span.fa.fa-music
+              p.text-center DESIGN
+          li
+            a(href="#marketer" data-toggle="tab")
+              h2
+                span.fa.fa-fire
+              p.text-center GROWTH                
+          li
+            a(href="#write" data-toggle="tab")
+              h2
+                span.fa.fa-edit
+              p.text-center CONTENT                
+          li
+            a(href="#ed" data-toggle="tab")
+              h2
+                span.fa.fa-flask
+              p.text-center EDU
+
+    .row
+      .tab-content
+        #dev.tab-pane.fade.in.active
+          .col-md-6
+            blockquote Vikram geeks out on opensource, using it to help the dev team deploy a lot quicker. His lean approach helped departments get just what they needed for their product campaigns.
+            h4 Issa Diao
+            small
+              p Lead Developer @ Altius Education
+          .col-md-6
+            h3 Frontend from Open Frameworks
+            p Software is complex but opensource communities makes it easier. Vikram uses boilerplates, preprocessors and CMS for efficient builds.
+            p Inhouse Developer @ Altius Education
+            p
+              button.btn .HTML.JADE
+              button.btn .CSS.STYLUS
+              button.btn .PHP
+            p
+              button.btn .GIT            
+              button.btn .JS
+              button.btn APIs
+        #design.tab-pane.fade
+          .col-md-6
+            blockquote Agency work is demanding but Vikram works with frameworks to get functioning prototypes quickly into client hands, smoothing the overall production experience.
+            h4 Brian Wald
+            small
+              p Solutions Architect @ Acquia, formerly Interactive Media Director @ Pryor Design
+          .col-md-6
+            h3 Usable Design and Rapid Prototyping
+            p The toolset varies but good design is still people driven. Working with Creative Suite and stylesheets, the focus is still on Type and prototyping
+            p Agency Work @ Pryor Design
+            p
+              button.btn .PSD
+              button.btn .AI
+              button.btn IDENTITY
+            p
+              button.btn WIREFRAMING
+              button.btn RESPONSIVE
+              button.btn W3C
+        #marketer.tab-pane.fade
+          .col-md-6
+            blockquote I met Vikram by chance and his livelines and generosity had me sold. His people savvy paired with design was just the edge our campaign needed.
+            h4 Sumi Kailasapathy
+            small
+              p Ann Arbor City Council
+          .col-md-6
+            h3 Growth Hacking for Products
+            p Good campaigns inspire people and keep them engaged. Researching trends to predict customer engagement with analytics to measure outcomes.
+            p
+              button.btn ANALYTICS
+              button.btn ADVERTISING
+              button.btn SEO
+            p
+              button.btn CAMPAIGNS
+        #write.tab-pane.fade
+          .col-md-6
+            blockquote I run a music label and Vikram's cassette blog was all the rage. A simple aesthetic and powerful writing, I knew I had to join him right away.
+            h4 Christian Filardo
+            small
+              p Holy Page Records & Tape Famous Writer
+          .col-md-6
+            h3 Content First
+            p Putting products into pictures and words to inform and inspire, using content strategy and effective writing for impact.
+            p Founder and Music Writer @ Tape Famous
+            p
+              button.btn CMS
+              button.btn BLOGGING
+              button.btn TWITTER
+            p
+              button.btn INSTAGRAM
+              button.btn PHOTOGRAPHY
+        #ed.tab-pane.fade
+          .col-md-6
+            blockquote Vikram taught me to love learning, he inspired creativity and curiosity in everything we explored...psychology, mathematics and technology. He continues to mentor me in college.
+            h4 Ollie Bolz
+            small
+              p University of Denver & former Student
+          .col-md-6
+            h3 Creativity is Curious
+            p A varied Asian Canadian education and a former technology teacher.
+            p Research, Inquiry and Experimentation ~ Natural curiosity
+            p High School Technology Teacher & Administrator @ Clonlara 
+            p
+              button.btn MCGILL
+              button.btn CLONLARA INSTRUCTOR
+            p
+              button.btn AUTODIDACT
+
+section(data-center-top="background-color:rgb(242,168,143)" data-100-center="background-color:rgb(126,199,208)")#projects
+  #wave(data-bottom-top="background-position: -30% 0%" data-top-bottom="background-position: 60% 0%")
+    #wavy(data-bottom-top="background-position: 0% 0%" data-top-bottom="background-position: 60% 0%")
+      article.container
+        header.text-center
+          h2 PROJECTS
+          h4 Passion Meets Skill
+        .row
+          .col-md-6
+            .row
+              .col-md-6.col-md-offset-3.visible-lg.visible-md
+                img(src="../img/coast.jpg").img-circle.img-responsive
+            .row
+              .col-md-8.col-md-offset-2
+                h3.text-center Coast
+                p If you're wondering where to go next weekend or next month, Coast is for you
+                p Being prototyping in AngularJS, Coast explores the realms of dreams and travel through imagery and geolocation
+                h4 UPCOMING
+          .col-md-6
+            .row
+              .col-md-6.col-md-offset-3.visible-lg.visible-md
+                img(src="../img/famously.jpg").img-circle.img-responsive
+            .row
+              .col-md-8.col-md-offset-2
+                h3.text-center Famously
+                p A popular cassette music blog for new music with a wealth of esoteria  
+                p Rebuilding Tape Famous as an app with features like a persistent player and voting, but with the warmth of radio and cassette decks
+                h4 
+                  a(href="http://www.tapefamous.com" target="_blank") TAPEFAMOUS
+
+
+section#articles
+  article.container
+    header.text-center
+      h2 WRITING
+    .row
+      .col-md-8.col-md-offset-2
+        each doc in getCollection('posts').toJSON()
+          h4
+            a(href=doc.url)= doc.title
+
+section#clients
+  article.container
+    header.text-center
+      h4 PAST CLIENTS    
+    .row
+      .col-md-8.col-md-offset-2
+        p Aynah, Sumi Kailasapathy for City Council, Protect Our Libraries, Sic Transit Cycles, These Curls Vintage, Commonwealth Cafe and Pub, Bureau of Bloom, Institute for Clinical Pharmacodynamics, Molecular Imaging, Eisenhower Center, Clonlara School, Terra Global, Danotek, Tangent and many more from long ago
+        h4 
+          a(href="https://www.behance.net/recordfamous" target="_blank") You can examples of my work on Behance
+
+section#likes
+  article.container.alert
+    header.text-center
+      h4 BUILT WITH
+    .row
+      .col-md-4.col-md-offset-2
+        p
+          a(href="http://docpad.org/" target="_blank") DocPad
+          |-NodeJS static site builder
+        p
+          a(href="http://fortawesome.github.io/Font-Awesome/" target="_blank") Font Awesome
+          |-Icon extension
+      .col-md-4
+        p
+          a(href="https://github.com/Prinzhorn/skrollr" target="_blank") Skrollr
+          |-JS parallax and tweening 
+        p
+          a(href="http://prose.io" target="_blank") Prose
+          |-Github markdown editor

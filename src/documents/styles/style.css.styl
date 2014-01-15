@@ -1,13 +1,170 @@
+@font-face
+  font-family Lato
+  font-style normal
+  font-weight 300
+  src url(http://themes.googleusercontent.com/static/fonts/lato/v7/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff)
+
+@font-face
+  font-family Lato
+  font-style normal
+  font-weight 400
+  src url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff)
+
+html
+  font-size 62.5%
+
+font-size(n)
+  if unit(n) is 'px'
+    font-size: n
+    font-size: (remove-unit(n) / 10) rem
+
 a, a:link
   cursor pointer
 
+.container
+  max-width 980px
+
 body
-  padding-top 60px
+  font-family Lato
+  background-color rgba(255,211,128, 0.4)
+  font-size(16px)
+  p
+    margin-top 4.15px
+    margin-bottom 4.15px
+
+body.square
+  background-color #fff
+  #navbar-main
+    display none
+
+.square .container
+  max-width 1200px
+
+.navbar-default
+  background-color #D35858
+  border none
+  margin-bottom 0
+  a 
+    color #fff
+
+blockquote p
+  font-weight 700
+
+h1, h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6
+  font-family Lato
+  font-weight 300
+
+h1, .h1
+  font-size(70px)
+  margin-top 21px
+  margin-bottom 14px
+
+h2, .h2
+  font-size(47.25px)
+  margin-top 21px
+  margin-bottom 14px
+
+h3, .h3
+  font-size(31.5px)
+  margin-top 9.33px
+  margin-bottom 6.22px
+
+h4, .h4
+  font-size(21px)
+  margin-top 9.33px
+  margin-bottom 6.22px
 
 table
   tfoot, tbody
     th
       border-top 1px solid #DDD
 
-footer
-  padding-bottom: 30px
+#intro, #page, #post
+  padding-top 31.5px
+  padding-bottom 47.25px
+  
+.btn
+  background-color #D35858
+  color #fff
+  margin-right 5px
+
+.nav-pills > li.active > a
+  background none
+  color #d35858
+
+#intro
+  padding-top 67.25px
+  padding-bottom 287.25px
+  background url('../img/cassy.jpg') no-repeat center -25%
+  background-size 100% auto
+
+#sq-profile, #sq-lead, #sq-extra, #sq-fit, #sq-process, #sq-pitch, #sq-close
+  margin-top 30px
+
+#brief .container
+  background-position-x center
+  background-size 100% auto
+
+#about
+  .row
+    margin-top 20px
+  span
+    font-size 132px
+  span.fa-eye
+    color #9E727E
+  span.fa-edit
+    color #44374F
+  span.glyphicon-cog
+    color #444
+  span.glyphicon-user
+    color #C65970
+
+#projects
+  .row
+    margin-top 20px
+
+#wavy
+  .container > .row
+    margin-top 20px
+    margin-bottom 20px
+  .container .row .row .col-md-8
+    margin-bottom 20px
+
+#articles
+  .container
+    padding-bottom 40px
+  .article
+    margin-top 20px
+
+#brief, #projects, #articles, #likes, #clients
+	.container
+    padding-top 31.5px
+    padding-bottom 47.25px
+
+#wave
+  background url('../img/bkg-wave.png') repeat
+
+#wavy
+  background url('../img/bkg-wavy.png') repeat
+
+
+.carousel-control.left, .carousel-control.right, .carousel-control:hover
+  background-image none 
+
+#footer
+  h3 span a
+    color #888
+  h3
+    color #888
+
+@css {
+  @media all and (max-width: 768px) {
+    html {font-size:55%}
+    #brief .container {background: none}
+    #brief .nav-justified > li { display: table-cell; width: 1%; float:none}
+    #brief .nav-justified > li > a {padding: 10px 2px;}
+    #brief .nav-justified > li > a > h2 {font-size:32.5px; font-size:3.25rem}
+    #intro {background-size: auto; padding-top: 47.25px;}
+}
+  @media all and (min-width: 768px) and (max-width: 992px) {html {font-size:57%}}
+}

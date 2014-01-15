@@ -2,9 +2,13 @@
 layout: default
 ---
 
-article#post.post
-  h1= document.title
-  .post-content!= content
+.container
+  section#post.post
+  header
+    h1= document.title
+  article.row
+    .col-md-8.col-md-offset-2
+      .post-content!= content
 
 footer
   if document.relatedDocuments && document.relatedDocuments.length

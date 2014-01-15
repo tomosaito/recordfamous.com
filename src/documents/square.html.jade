@@ -1,0 +1,148 @@
+---
+layout: default
+title: 'SQUARE'
+bodyClass: square
+---
+
+| <section ng-app ng-init="count=60" id="sq-tools">
+article.container
+  header
+    .row#sq-profile
+      .col-md-2.visible-md.visible-lg
+        img(src="../img/me.jpg").img-responsive.img-circle
+      .col-md-10
+        h2 INTERACTIVE PRODUCER
+        h3 3 items for Designers
+        strong
+          p Vikram Babu's application to @JoinSquare
+  .row#sq-lead
+    .col-sm-4
+      img(src="../img/coat.jpg").img-responsive.img-rounded
+    .col-sm-8
+      h3 Pointer Brand Fisher Stripe Chore Coat
+      h4 $112
+      h4 A versatile coat with plenty of storage, you can layer it for moody SF weather
+      button(ng-click="count = count + 10; coat=true" ng-disabled="coat").btn
+        | <span class="fa fa-heart-o"></span>
+      .row
+        .col-md-3
+          P
+            strong Utility:
+        .col-md-9
+          p Whether you're out in the field or in the studio, you need pockets for your tools; camera, notebook, markets & knife
+      .row
+        .col-md-3
+          P
+            strong Origin:
+        .col-md-9
+          p Made in Bristol, Tennessee, this tightly woven cotton provides protection while doubling as a casual coat
+      .row
+        .col-md-3
+          P
+            strong Saved to:
+        .col-md-9
+          p Fashion & Work
+
+  .row#sq-fit.alert.alert-info.visible-sm.visible-md.visible-lg
+    .col-md-6
+      ul.nav-pills.nav.nav-justified
+        li.text-center
+          h3.fa.fa-cog
+          p Developer
+        li.text-center
+          h3.fa.fa-music
+          p Designer
+        li.text-center(ng-show="coat")
+          h3.fa.fa-scissors
+          p Resourceful
+        li.text-center(ng-show="bag")
+          h3.fa.fa-road
+          p Traveled
+        li.text-center(ng-show="coffee")
+          h3.fa.fa-coffee
+          p Energetic
+    .col-md-6.text-center
+      h3 FIT <span class="fa fa-heart"></span> {{count}}
+      p Based on your selections
+
+  .row#sq-extra
+    .col-sm-6
+      .row
+        .col-md-6
+          img(src="../img/bag.jpg").img-responsive.img-rounded
+        .col-md-6
+          h3 Duluth Pack Safari Portfolio
+          h4 $175
+          button(ng-click="count = count + 10; bag=true" ng-disabled="bag").btn
+            | <span class="fa fa-heart-o"></span>
+          p The daily commute takes a toll on your bags but heavy canvas stands up to the challenge
+          p Made in Duluth, Minnesota, they put a lifetime guarantee on this
+          p Accessories & Work
+    .col-sm-6
+      .row
+        .col-md-6
+          img(src="../img/copa.jpg").img-responsive.img-rounded
+        .col-md-6
+          h3 Americano
+          h4 $3
+          button(ng-click="count = count + 10; coffee=true" ng-disabled="coffee").btn
+            | <span class="fa fa-heart-o"></span>
+          p It is claimed that the enlightenment period coincided with the arrival of coffee in Europe...works for me
+          p Made in Italy, a daily workhorse that works as hard as you do
+          p Food & Work
+
+article.container
+  header#sq-process.text-center
+    .col-md-12
+      h2 PROCESS
+      h3 From Idea to Identity      
+  .row
+    .col-md-3
+      h4 RESEARCH SKETCH 
+        span.fa.fa-pencil
+      p Starting with an exploration into Marketplace, my concept was simple, a pitch resembling a product page with some of my favorite goods
+    .col-md-3
+      h4 PROTOTYPE 
+        span.fa.fa-cogs
+      p Using an abstractable framework and a few quick photos, I mocked a wireframe prototype in Bootstrap
+    .col-md-3
+      h4 MICROINTERACTIONS 
+        span.fa.fa-flash
+      p When the rapid prototype felt viable, I added microinteractions to extend the concept of commerce UX using simple AngularJS directives
+    .col-md-3
+      h4 PRESENTATION 
+        span.fa.fa-flag-checkered
+      p Pulling everything together with a deep dive into type, content and the templating layer to boost the impact of this campaign
+
+article.container
+  header#sq-process.text-center
+    .col-md-12
+      h2 PITCH
+      h3 3 Reasons Why I'd Love to Work at Square
+  .row
+    .col-md-8.col-md-offset-2
+      h4 I SWEAR BY HANDCRAFTED GOODS & LOCAL BUSINESSES 
+      p I understand products and marketplaces and would love to build strategic campaigns to bring product stories to life. I've made artisanal chocolate, roasted coffee and sold them at farmer's markets.
+      h4 MY MIND RACES WITH CATCHY HEADLINES AND CAMPAIGNS
+      p A jack of all trades, at some point in my career I've worked with everything from display banner advertising to form lead generating campaigns, these days Javascript and microblogging get me excited. 
+      h4 DESIGN, CODE & CODE CAMP 
+      p As an autodidact and former technology teacher, I'm constantly learning and sharing knowledge. You'll often find me writing about new music, exploring opensource or simply advising friends at
+      a(href="http://runway.is" target="_blank") Runway.
+
+article.container.text-center
+  header#sq-close
+    .col-md-12
+      h3 Thanks for your interest!
+      h4 You can also visit my 
+        a(href="http://recordfamous.com/" target="_blank") Homepage 
+        |  & 
+        a(href="http://behance.net/recordfamous" target="_blank") Behance
+  .row
+    .col-md-8.col-md-offset-2
+      p This microsite was made possible by 
+        a(href="http://docpad.org/" target="_blank") DocPad, 
+        a(href="http://fortawesome.github.io/Font-Awesome/" target="_blank") Font Awesome & 
+        a(href="http://angularjs.org/" target="_blank") AngularJS
+      p If you like what you saw feel free to contact me by phone, email or twitter
+      | <a href="https://twitter.com/intent/tweet?screen_name=recordfamous&text=I%20like%20your%20style%20Vikram..." class="twitter-mention-button" data-related="recordfamous">Tweet to @recordfamous</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+| </section>

@@ -10,10 +10,10 @@
 
 //- Bootstrap
 - scripts.add(["/vendor/components-bootstrap/js/bootstrap.js"])
-- styles.add(["/vendor/components-bootstrap/css/bootstrap.css"])
+- styles.add(["/vendor/components-bootstrap/css/bootstrap.css","//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"])
 
 //- Other Scripts
-- scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
+- scripts.add(["/vendor/skrollr.min.js","/vendor/log.js","/vendor/modernizr.js","/vendor/angular.js"])
 
 //- User
 - styles.add(["/styles/style.css"])
@@ -44,7 +44,8 @@ html(lang="en")
     //- Mobile viewport optimized: h5bp.com/viewport
     meta(name="viewport", content="width=device-width")
 
-    // Icons
+    // Fonts & Icons
+    link(rel="apple-touch-icon-precomposed", sizes="144x144", href="/ico/apple-touch-icon-144-precomposed.png")
     link(rel="shortcut icon", href="/ico/favicon.ico")
     link(rel="apple-touch-icon-precomposed", sizes="144x144", href="/ico/apple-touch-icon-144-precomposed.png")
     link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/ico/apple-touch-icon-114-precomposed.png")
@@ -58,24 +59,24 @@ html(lang="en")
     // Styles
     != styles.toHTML()
 
-  body
+  block vars
+  body(class=getPreparedBodyClass())
 
     // Markup
-    nav.navbar.navbar-default.navbar-fixed-top
-      .container
-        .navbar-header
-          a.navbar-brand(href="/") Welcome
-        ul.nav.navbar-nav
-          each doc in getCollection('pages').toJSON()
-            - clazz = (document.url === doc.url) ? 'active' : null
-            li(typeof="sioc:Page", about=doc.url, class=clazz)
-              a(href=doc.url, property="dc:title")= doc.title
-    .container
-      section#content.content!= content
-      hr
-      footer
-        div= site.copyright
-        div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
+    //- nav(role="navigation").navbar.navbar-default#navbar-main
+    //-   .container    
+    //-     ul.nav.navbar-nav.navbar-right
+    //-       each doc in getCollection('pages').toJSON()
+    //-         - clazz = (document.url === doc.url) ? 'active' : null
+    //-         li(typeof="sioc:Page", about=doc.url, class=clazz).navbar-right
+    //-           a(href=doc.url, property="dc:title")= doc.title
 
+    != content
+
+    footer.container.text-center
+      h2 <a href="http://twitter.com/recordfamous"><span class="fa fa-twitter"></span></a> : <a href="http://tapefamous.com"><span class="fa fa-tumblr"></span></a> : <a href="http://www.linkedin.com/pub/vikram-babu/5a/a3b/b97"><span class="fa fa-linkedin"></span></a> : <a href="http://instagram.com/recordfamous"><span class="fa fa-instagram"></span></a>
+      h4= site.copyright
+      h4 Handbuilt with <span class="glyphicon glyphicon-heart"></span> in Oakland</h4>
+      p vikram at recordfamous dot com || 734 238 3827
     // Scripts
     != scripts.toHTML()

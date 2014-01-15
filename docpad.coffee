@@ -12,7 +12,7 @@ docpadConfig =
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: "http://recordfamous.github.com"
 
       # Here are some old site urls that you would like to redirect from
       oldUrls: [
@@ -21,27 +21,26 @@ docpadConfig =
       ]
 
       # The default title of our website
-      title: "Your Website"
+      title: "Record Famous"
 
       # The website description (for SEO)
       description: """
-        When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+        This is Record Famous, shop front for Vikram.
         """
 
       # The website keywords (for SEO) separated by commas
       keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+        web, css, html, nodejs, angularjs, developer, designer, cassette, music, coffee, rock, roll, job
         """
 
       # The website author's name
-      author: "Your Name"
+      author: "Vikram Babu"
 
       # The website author's email
-      email: "your@email.com"
+      email: "vikram at recordfamous dot com"
 
       # Your company's name
-      copyright: "© Your Company 2013"
-
+      copyright: "© RECORD FAMOUS '13"
 
     # Helper Functions
     # ----------------
@@ -67,6 +66,11 @@ docpadConfig =
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
 
+    getPreparedBodyClass: ->
+      if @document.bodyClass
+        "#{@document.bodyClass}"
+      else
+        "generic"
 
   # Collections
   # ===========
